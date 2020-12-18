@@ -5,10 +5,11 @@ This applicaiton will allow the user to track their daily food intake, investmen
 I currently use 5 differnt applicaiton and I am tired of having to log things all over the place. I would like to type a paragraph and be able to have it all noted down. 
 
 ## Build status
-Build status of continus integration i.e. travis, appveyor etc. Ex. - 
 
-[![Build Status] - Coming soon. 
-[![Windows Build Status]- Coming soon
+
+- [![Build Status] - Coming soon. 
+
+- [![Windows Build Status]- Coming soon
 
 ## Code style
 
