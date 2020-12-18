@@ -14,9 +14,6 @@ I currently use 5 differnt applicaiton and I am tired of having to log things al
 ## Code style
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
- 
-## Screenshots
-Include logo/demo screenshot etc.
 
 ## Tech/framework used
 Node.JS, Express, GraphQl, TypeScript
