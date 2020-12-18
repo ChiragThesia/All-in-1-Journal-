@@ -47,12 +47,15 @@ const schema = makeExecutableSchema({
     resolvers
 })
 
+//server created as an APP. 
 const app = express()
 const server = new ApolloServer({
     schema,
     playground: true, 
     introspection: true
 });
+
+
 
 server.applyMiddleware({app})
 app.use(cors())
