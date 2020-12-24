@@ -17,7 +17,7 @@ I currently use 5 differnt applicaiton and I am tired of having to log things al
 
 ## Tech/framework used
 Node.JS, Express, GraphQl, TypeScript
-# boop
+
 
 ## Features
 User can enter a paragraph and the system will use NLP and parse out the important information such as food intake, workouts, financial investments, thought process and provide a visualization and tracking. 
