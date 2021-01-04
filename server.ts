@@ -13,7 +13,6 @@ const mongoURI = require('./config/config');
 //express instance
 
 const server = express();
-const PORT = process.env.PORT || 8080;
 
 mongoose
     .connect(
@@ -59,7 +58,7 @@ server.get('/', (req:any,res:any)=>{
     
 })
 
-server.get('/login', (req: any, res: any) => {
+server.get('/dashboard', (req: any, res: any) => {
     res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged Out')
 })
 
@@ -72,6 +71,6 @@ server.all("*", (req:any,res:any)=>{
     res.status(404).json({message: "URL cannot be found."})
     
 })
-server.listen(PORT, ()=>{
-    console.info(`🚀 🧑🏽‍💻Server is running on ${process.env.NODE_ENV} mode at: http://localhost:${PORT} 🚀`); //eslint-disable-line no-console
+server.listen(process.env.port || 8080, ()=>{
+    console.info(`🚀 🧑🏽‍💻Server is running on ${process.env.NODE_ENV} mode at: http://localhost:${process.env.port||8080} 🚀`); //eslint-disable-line no-console
 })
