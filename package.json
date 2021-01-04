@@ -4,7 +4,7 @@
   "description": "This applicaiton will allow the user to track their daily food intake, investments, and thoughts in one central area.",
   "main": "server.ts",
   "scripts": {
-    "start": "NODE_ENV=production nodemon server.ts",
+    "start": "node server.ts",
     "server": "nodemon server.ts",
     "lint": "eslint server --ext .ts",
     "test": "echo \"Error: no test specified\" && exit 1"

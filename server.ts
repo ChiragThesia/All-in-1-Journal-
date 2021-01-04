@@ -32,12 +32,15 @@ mongoose
 server.use(morgan('dev'));
 server.use(helmet());
 server.use(express.json());
-server.use(cors())
+server.use(cors({
+    'Access-Control-Allow-Origin':'http://localhost:3000/',
+    'Access-Control-Allow-Headers':'Content-Type'
+}))
 
 const config: object = {
     authRequired: false, 
     auth0Logout: true, 
-    secret: process.env.AUTH_SECRET,
+    secret: process.env.SECRET_AUTH,
     baseURL: process.env.BASE_URL,
     clientID: process.env.AUTH_CLIENT_ID,
     issuerBaseURL: process.env.AUTH_ISSUER_BASE_URL
@@ -46,17 +49,18 @@ const config: object = {
 
 server.use(auth(config))
 
-server.get('/', (req:any, res:any)=>{
-    res.send(req.oidc.isAuthenticated()? 'Logged in' : 'Logged Out')
-})
 
 server.get('/', (req:any,res:any)=>{
     try{
-        res.status(200).send("THe API is up and running")
+        res.status(200).send("The API is up and running")
     } catch(error){
         res.status(404).send({message:"ran into an issue"}, error)
     }
     
+})
+
+server.get('/login', (req: any, res: any) => {
+    res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged Out')
 })
 
 //User Profile 
