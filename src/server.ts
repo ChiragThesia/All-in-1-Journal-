@@ -51,7 +51,7 @@ server.use(auth(config))
 
 server.get('/', (req:any,res:any)=>{
     try{
-        res.status(200).send("The API is up and running")
+        res.status(200).send("The API is up and running! Running!")
     } catch(error){
         res.status(404).send({message:"ran into an issue"}, error)
     }
