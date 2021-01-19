@@ -4,7 +4,7 @@
   "description": "Journal Application for personal care. ",
   "main": "server.js ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
+    "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.ts"
   },
   "repository": {
@@ -18,12 +18,8 @@
   },
   "homepage": "https://github.com/ChiragThesia/Journal-API#readme",
   "dependencies": {
-    "apollo-errors": "^1.9.0",
-    "apollo-resolvers": "^1.4.2",
-    "apollo-server-express": "^2.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "graphql": "^15.4.0",
     "graphql-scalars": "^1.5.0",
     "lodash.merge": "^4.6.2",
     "winston": "^3.3.3"
